@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(ggcall.imp)
+library(ggcall.example)
 
-test_check("ggcall.imp")
+test_check("ggcall.example")
