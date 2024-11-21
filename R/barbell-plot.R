@@ -42,7 +42,8 @@ barbell_plot <- function(barbell_data, category_col, value1_col, value2_col,
   data_long <- data.frame(
     Category = rep(barbell_data[[category_col]], 2),
     Value = c(barbell_data[[value1_col]], barbell_data[[value2_col]]),
-    Group = rep(group_labels, each = nrow(barbell_data))
+    Group = rep(group_labels, each = nrow(barbell_data)),
+    stringsAsFactors = FALSE
   )
 
   data_long$Category <- factor(data_long$Category, levels = unique(barbell_data[[category_col]]))
