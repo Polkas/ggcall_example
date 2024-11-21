@@ -16,10 +16,10 @@ Upload standalone ggcall files
 usethis::use_standalone("polkas/ggcall", "patchwork.R", ref = "v0.3.3")
 ```
 
-Now the forest and barbell plots function was created 
+Now the forest and barbell plot functions were created 
 
 ```r
-remotes::install_github("https://github.com/Polkas/ggcall.imp")
+remotes::install_github("https://github.com/Polkas/ggcall_imp")
 library(ggcall.imp)
 
 df <- data.frame(
