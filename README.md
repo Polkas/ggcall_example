@@ -1,22 +1,26 @@
 
 # ggcall.example
 
-Package created as an example of easy implementation of ggcall.
+Package created as an example of implementation for [ggcall](https://github.com/Polkas/ggcall).
 
-Package created with
+The ggcall package enhances the functionality of ggplot2 by enabling users to retrieve the complete code used to generate a ggplot object inside a function. This package is beneficial for understanding and replicating complex ggplot2 plots returned by a function. From technical point of view, ggcall extends ggplot2 + operator and ggplot function to track the history of plot construction.
+
+Package was created with:
 
 ```
 usethis::create_package(".")
 usethis::use_testthat(edition = 3)
 ```
 
-Upload standalone ggcall files
+Next standalone ggcall files was uploaded:
 
 ```
 usethis::use_standalone("polkas/ggcall", "patchwork.R", ref = "v0.3.3")
 ```
 
-Now the forest and barbell plot functions were created 
+Now the forest and barbell plot functions were created.
+
+Feel free to experiment with forest and barbell plot functions and ggcall.
 
 ```r
 remotes::install_github("https://github.com/Polkas/ggcall_example")
