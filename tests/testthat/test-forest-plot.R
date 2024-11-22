@@ -14,7 +14,7 @@ test_that("forest_plot works with valid input", {
   expect_equal(plot$labels$x, "Estimate")
   expect_equal(plot$labels$title, "Forest Plot")
 
-  expected_labels <- factor(df$Treatment, levels = df$Treatment)
+  expected_labels <- df$Treatment
   actual_labels <- ggplot_build(plot)$layout$panel_params[[1]]$y$get_labels()
   expect_equal(actual_labels, expected_labels)
 })
