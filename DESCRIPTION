@@ -1,11 +1,14 @@
 Package: ggcall.example
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Example Implementation of 'ggcall'
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Maciej", "Nasinski", , "nasinski.maciej@example.com", role = c("aut", "cre"))
+Description: 
+    Example implementation of 'ggcall' which enhances the functionality of ggplot2 by enabling users to retrieve the complete code used to generate a ggplot object inside a function. 
+    The 'ggcall' package is beneficial for understanding and replicating complex ggplot2 plots returned by a function. 
 License: Apache License (>= 2)
+URL: https://github.com/Polkas/ggcall_example
+BugReports: https://github.com/Polkas/ggcall_example/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

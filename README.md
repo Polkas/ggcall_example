@@ -15,7 +15,7 @@ usethis::use_testthat(edition = 3)
 Next standalone ggcall files was uploaded:
 
 ```
-usethis::use_standalone("polkas/ggcall", "patchwork.R", ref = "v0.3.3")
+usethis::use_standalone("polkas/ggcall", "patchwork.R", ref = "v0.3.4")
 ```
 
 Now the forest and barbell plot functions were created.
@@ -38,10 +38,10 @@ df <- data.frame(
 
 # Call the function, gg_plot is a ggplot object
 gg_forest <- forest_plot(df, "Estimate", "CI_lower", "CI_upper", "Treatment")
-gg_plot
+gg_forest
 
 # Retrieve the plot construction code
-call_forest <- ggcall(gg_plot)
+call_forest <- ggcall(gg_forest)
 
 # Optionally: Style the code with styler
 # install.packages("styler")
@@ -63,6 +63,6 @@ gg_barbell <- barbell_plot(df, "Category", "Before", "After", group_labels = c("
 
 call_barbell <- ggcall(gg_barbell)
 
-eval_ggcall(gg_barbell)
+eval_ggcall(call_barbell)
 ```
 
