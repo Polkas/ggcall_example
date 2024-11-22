@@ -13,7 +13,7 @@ test_that("barbell_plot works with valid input", {
   expect_equal(plot$labels$x, "Value")
   expect_equal(plot$labels$title, "Barbell Plot")
 
-  expected_categories <- unique(df$Category)
+  expected_categories <- factor(df$Category, levels = c("A", "B", "C", "D"))
   actual_categories <- unique(plot$data$Category)
   expect_equal(actual_categories, expected_categories)
 })
