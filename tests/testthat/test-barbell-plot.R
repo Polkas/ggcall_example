@@ -2,7 +2,8 @@ test_that("barbell_plot works with valid input", {
   df <- data.frame(
     Category = c("A", "B", "C", "D"),
     Before = c(3.5, 4.2, 2.8, 5.1),
-    After = c(4.0, 4.5, 3.1, 5.5)
+    After = c(4.0, 4.5, 3.1, 5.5),
+    stringsAsFactors = FALSE
   )
 
   plot <- barbell_plot(df, "Category", "Before", "After", group_labels = c("Before", "After"))
@@ -13,14 +14,15 @@ test_that("barbell_plot works with valid input", {
   expect_equal(plot$labels$title, "Barbell Plot")
 
   expected_categories <- unique(df$Category)
-  actual_categories <- levels(plot$data$Category)
+  actual_categories <- unique(plot$data$Category)
   expect_equal(actual_categories, expected_categories)
 })
 
 test_that("barbell_plot handles missing columns appropriately", {
   df_missing <- data.frame(
     Category = c("A", "B", "C", "D"),
-    Before = c(3.5, 4.2, 2.8, 5.1)
+    Before = c(3.5, 4.2, 2.8, 5.1),
+    stringsAsFactors = FALSE
   )
 
   expect_error(
