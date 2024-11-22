@@ -3,7 +3,8 @@ test_that("forest_plot works with valid input", {
     Treatment = c("Treatment A", "Treatment B", "Treatment C"),
     Estimate = c(0.2, 0.5, -0.1),
     CI_lower = c(0.1, 0.3, -0.3),
-    CI_upper = c(0.3, 0.7, 0.1)
+    CI_upper = c(0.3, 0.7, 0.1),
+    stringsAsFactors = FALSE
   )
 
   plot <- forest_plot(df, "Estimate", "CI_lower", "CI_upper", "Treatment")
