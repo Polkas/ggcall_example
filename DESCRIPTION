@@ -1,6 +1,6 @@
 Package: ggcall.example
 Title: Example Implementation of 'ggcall'
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person("Maciej", "Nasinski", , "nasinski.maciej@example.com", role = c("aut", "cre"))
 Description: 
